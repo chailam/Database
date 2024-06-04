@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="904C5DFB-07FB-BF20-D261-F6874B6C8AE1" name="BORRCLASSIFICATION">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:34:42 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="borrClass" id="ECAD9D61-EAA1-AF35-300C-BA58336FB181">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:34:59 UTC</createdTime>
+<commentInRDBMS>The classification of borrower(Junior, Adult, Organisation)</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numberOfBooks" id="2FA60AC0-E2B6-A4A2-433D-C4A6C6F803E4">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:36:00 UTC</createdTime>
+<commentInRDBMS>The restriction on the number of books a borrower may have on loan at any one time.</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_numberOfBooks</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="numberOfBooks &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loanPeriod" id="08CF135A-F7E0-22DD-0918-3762003E18D0">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:37:04 UTC</createdTime>
+<commentInRDBMS>The loan period of the borrower classification</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_loanPeriod</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="loanPeriod &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85E14E17-D5B8-5C1B-EAAD-27A06DB786C4" name="BORRCLASSIFICATION PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:35:31 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>ECAD9D61-EAA1-AF35-300C-BA58336FB181</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

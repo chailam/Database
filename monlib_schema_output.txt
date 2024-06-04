@@ -1,0 +1,846 @@
+SQL> 
+SQL> DROP SEQUENCE author_aucode_seq;
+
+Sequence AUTHOR_AUCODE_SEQ dropped.
+
+SQL> 
+SQL> DROP SEQUENCE borrower_borrno_seq;
+
+Sequence BORROWER_BORRNO_SEQ dropped.
+
+SQL> 
+SQL> DROP SEQUENCE branch_brancode_seq;
+
+Sequence BRANCH_BRANCODE_SEQ dropped.
+
+SQL> 
+SQL> DROP SEQUENCE seq_manno;
+
+Sequence SEQ_MANNO dropped.
+
+SQL> 
+SQL> DROP SEQUENCE publisher_pubcode_seq;
+
+Sequence PUBLISHER_PUBCODE_SEQ dropped.
+
+SQL> 
+SQL> DROP TABLE author CASCADE CONSTRAINTS;
+
+Table AUTHOR dropped.
+
+SQL> 
+SQL> DROP TABLE book CASCADE CONSTRAINTS;
+
+Table BOOK dropped.
+
+SQL> 
+SQL> DROP TABLE bookauthor CASCADE CONSTRAINTS;
+
+Table BOOKAUTHOR dropped.
+
+SQL> 
+SQL> DROP TABLE booksubject CASCADE CONSTRAINTS;
+
+Table BOOKSUBJECT dropped.
+
+SQL> 
+SQL> DROP TABLE borrclassification CASCADE CONSTRAINTS;
+
+Table BORRCLASSIFICATION dropped.
+
+SQL> 
+SQL> DROP TABLE borrower CASCADE CONSTRAINTS;
+
+Table BORROWER dropped.
+
+SQL> 
+SQL> DROP TABLE branch CASCADE CONSTRAINTS;
+
+Table BRANCH dropped.
+
+SQL> 
+SQL> DROP TABLE copies CASCADE CONSTRAINTS;
+
+Table COPIES dropped.
+
+SQL> 
+SQL> DROP TABLE fine CASCADE CONSTRAINTS;
+
+Table FINE dropped.
+
+SQL> 
+SQL> DROP TABLE isbn CASCADE CONSTRAINTS;
+
+Table ISBN dropped.
+
+SQL> 
+SQL> DROP TABLE loan CASCADE CONSTRAINTS;
+
+Table LOAN dropped.
+
+SQL> 
+SQL> DROP TABLE manager CASCADE CONSTRAINTS;
+
+Table MANAGER dropped.
+
+SQL> 
+SQL> DROP TABLE publisher CASCADE CONSTRAINTS;
+
+Table PUBLISHER dropped.
+
+SQL> 
+SQL> DROP TABLE reservation CASCADE CONSTRAINTS;
+
+Table RESERVATION dropped.
+
+SQL> 
+SQL> DROP TABLE subject CASCADE CONSTRAINTS;
+
+Table SUBJECT dropped.
+
+SQL> 
+SQL> CREATE TABLE author (
+  2      aucode   NUMBER(7) NOT NULL,
+  3      auname   VARCHAR2(20) NOT NULL
+  4  );
+
+Table AUTHOR created.
+
+SQL> 
+SQL> COMMENT ON COLUMN author.aucode IS
+  2      'The author''s code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN author.auname IS
+  2      'The author''s name';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE author ADD CONSTRAINT author_pk PRIMARY KEY ( aucode );
+
+Table AUTHOR altered.
+
+SQL> 
+SQL> CREATE TABLE book (
+  2      bookcallno           VARCHAR2(20) NOT NULL,
+  3      booktitle            VARCHAR2(100) NOT NULL,
+  4      bookdescription      VARCHAR2(1000) NOT NULL,
+  5      bookpubyear          NUMBER(4) NOT NULL,
+  6      bookprice            NUMBER(6,2) NOT NULL,
+  7      booknumberpages      NUMBER(5) NOT NULL,
+  8      bookclassification   VARCHAR2(10) NOT NULL,
+  9      bookreadinglevel     NUMBER(2),
+ 10      pubcode              NUMBER(7) NOT NULL
+ 11  );
+
+Table BOOK created.
+
+SQL> 
+SQL> ALTER TABLE book ADD CONSTRAINT chk_bookprice CHECK ( bookprice > 0 );
+
+Table BOOK altered.
+
+SQL> 
+SQL> ALTER TABLE book ADD CONSTRAINT chk_booknumberpages CHECK ( booknumberpages > 0 );
+
+Table BOOK altered.
+
+SQL> 
+SQL> ALTER TABLE book
+  2      ADD CONSTRAINT chk_bookreadinglevel CHECK ( bookreadinglevel BETWEEN 1 AND 30 );
+
+Table BOOK altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookcallno IS
+  2      'The Dewey Decimal call no of a book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.booktitle IS
+  2      'The title of the book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookdescription IS
+  2      'The description of the book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookpubyear IS
+  2      'The publication year of book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookprice IS
+  2      'The price of book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.booknumberpages IS
+  2      'The total number of pages of a book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookclassification IS
+  2      'The classification of a  book (Reference or Fiction)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.bookreadinglevel IS
+  2      'For a Fiction title, the reading level of the book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN book.pubcode IS
+  2      'The publisher''s code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE book ADD CONSTRAINT book_pk PRIMARY KEY ( bookcallno );
+
+Table BOOK altered.
+
+SQL> 
+SQL> CREATE TABLE bookauthor (
+  2      bookcallno   VARCHAR2(20) NOT NULL,
+  3      aucode       NUMBER(7) NOT NULL
+  4  );
+
+Table BOOKAUTHOR created.
+
+SQL> 
+SQL> COMMENT ON COLUMN bookauthor.bookcallno IS
+  2      'The Dewey Decimal call no of a book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN bookauthor.aucode IS
+  2      'The author''s code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE bookauthor ADD CONSTRAINT bookauthor_pk PRIMARY KEY ( bookcallno,
+  2  aucode );
+
+Table BOOKAUTHOR altered.
+
+SQL> 
+SQL> CREATE TABLE booksubject (
+  2      bookcallno   VARCHAR2(20) NOT NULL,
+  3      subname      VARCHAR2(50) NOT NULL
+  4  );
+
+Table BOOKSUBJECT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN booksubject.bookcallno IS
+  2      'The Dewey Decimal call no of a book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN booksubject.subname IS
+  2      'The subject name of the book';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE booksubject ADD CONSTRAINT booksubject_pk PRIMARY KEY ( bookcallno,
+  2  subname );
+
+Table BOOKSUBJECT altered.
+
+SQL> 
+SQL> CREATE TABLE borrclassification (
+  2      borrclass       VARCHAR2(15) NOT NULL,
+  3      numberofbooks   NUMBER(3) NOT NULL,
+  4      loanperiod      NUMBER(3) NOT NULL
+  5  );
+
+Table BORRCLASSIFICATION created.
+
+SQL> 
+SQL> ALTER TABLE borrclassification ADD CONSTRAINT chk_numberofbooks CHECK ( numberofbooks > 0 );
+
+Table BORRCLASSIFICATION altered.
+
+SQL> 
+SQL> ALTER TABLE borrclassification ADD CONSTRAINT chk_loanperiod CHECK ( loanperiod > 0 );
+
+Table BORRCLASSIFICATION altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrclassification.borrclass IS
+  2      'The classification of borrower(Junior, Adult, Organisation)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrclassification.numberofbooks IS
+  2      'The restriction on the number of books a borrower may have on loan at any one time.'
+  3  ;
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrclassification.loanperiod IS
+  2      'The loan period of the borrower classification';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE borrclassification ADD CONSTRAINT borrclassification_pk PRIMARY KEY ( borrclass
+  2  );
+
+Table BORRCLASSIFICATION altered.
+
+SQL> 
+SQL> CREATE TABLE borrower (
+  2      borrno        NUMBER(7) NOT NULL,
+  3      borrname      VARCHAR2(50) NOT NULL,
+  4      borraddress   VARCHAR2(50) NOT NULL,
+  5      borrflag      CHAR(1) NOT NULL,
+  6      borrclass     VARCHAR2(15) NOT NULL,
+  7      brancode      NUMBER(3) NOT NULL
+  8  );
+
+Table BORROWER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.borrno IS
+  2      'The borrower id number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.borrname IS
+  2      'The name of the borrower';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.borraddress IS
+  2      'The address of the borrower';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.borrflag IS
+  2      'The status of borrower to determine he/she can borrow a book or not';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.borrclass IS
+  2      'The classification of borrower(Junior, Adult, Organisation)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN borrower.brancode IS
+  2      'The code of the branch';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE borrower ADD CONSTRAINT borrower_pk PRIMARY KEY ( borrno );
+
+Table BORROWER altered.
+
+SQL> 
+SQL> CREATE TABLE branch (
+  2      brancode      NUMBER(3) NOT NULL,
+  3      branname      VARCHAR2(50) NOT NULL,
+  4      branaddress   VARCHAR2(50) NOT NULL,
+  5      branphone     CHAR(10) NOT NULL,
+  6      manno         NUMBER(7) NOT NULL
+  7  );
+
+Table BRANCH created.
+
+SQL> 
+SQL> ALTER TABLE branch ADD CONSTRAINT chk_brancode CHECK ( brancode >= 100 );
+
+Table BRANCH altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN branch.brancode IS
+  2      'The code of the branch';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN branch.branname IS
+  2      'The name of the branch';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN branch.branaddress IS
+  2      'The address of the branch';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN branch.branphone IS
+  2      'The phone number of the branch';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN branch.manno IS
+  2      'The id of manager.';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE branch ADD CONSTRAINT branch_pk PRIMARY KEY ( brancode );
+
+Table BRANCH altered.
+
+SQL> 
+SQL> CREATE TABLE copies (
+  2      copybarcodeno   NUMBER(15) NOT NULL,
+  3      statusflag      CHAR(1) NOT NULL,
+  4      bookcallno      VARCHAR2(20) NOT NULL,
+  5      brancode        NUMBER(3) NOT NULL
+  6  );
+
+Table COPIES created.
+
+SQL> 
+SQL> COMMENT ON COLUMN copies.copybarcodeno IS
+  2      'The barcode number of the copies';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN copies.statusflag IS
+  2      'The flag of the copies to indicate if it is on counter reserve or not';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN copies.bookcallno IS
+  2      'The Dewey Decimal call no of a book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN copies.brancode IS
+  2      'The code of the branch';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE copies ADD CONSTRAINT copies_pk PRIMARY KEY ( copybarcodeno );
+
+Table COPIES altered.
+
+SQL> 
+SQL> CREATE TABLE fine (
+  2      copybarcodeno     NUMBER(15) NOT NULL,
+  3      borrno            NUMBER(7) NOT NULL,
+  4      loanreturndate    DATE NOT NULL,
+  5      finepaymentdate   DATE,
+  6      fineamount        NUMBER(6,2) NOT NULL
+  7  );
+
+Table FINE created.
+
+SQL> 
+SQL> ALTER TABLE fine ADD CONSTRAINT chk_fineamount CHECK ( fineamount > 0 );
+
+Table FINE altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN fine.copybarcodeno IS
+  2      'The barcode number of the copies';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN fine.borrno IS
+  2      'The borrower id number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN fine.loanreturndate IS
+  2      'The return date of the loan';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN fine.finepaymentdate IS
+  2      'The payment date when the borrower pay the fine';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN fine.fineamount IS
+  2      'The fine amount';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE fine
+  2      ADD CONSTRAINT fine_pk PRIMARY KEY ( copybarcodeno,
+  3      borrno,
+  4      loanreturndate );
+
+Table FINE altered.
+
+SQL> 
+SQL> CREATE TABLE isbn (
+  2      isbncode     VARCHAR2(50) NOT NULL,
+  3      bookcallno   VARCHAR2(20) NOT NULL
+  4  );
+
+Table ISBN created.
+
+SQL> 
+SQL> COMMENT ON COLUMN isbn.isbncode IS
+  2      'The ISBN code of the book';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN isbn.bookcallno IS
+  2      'The Dewey Decimal call no of a book';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE isbn ADD CONSTRAINT isbn_pk PRIMARY KEY ( isbncode );
+
+Table ISBN altered.
+
+SQL> 
+SQL> CREATE TABLE loan (
+  2      copybarcodeno          NUMBER(15) NOT NULL,
+  3      loanreturndate         DATE NOT NULL,
+  4      borrno                 NUMBER(7) NOT NULL,
+  5      loanactualreturndate   DATE
+  6  );
+
+Table LOAN created.
+
+SQL> 
+SQL> COMMENT ON COLUMN loan.copybarcodeno IS
+  2      'The barcode number of the copies';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN loan.loanreturndate IS
+  2      'The return date of the loan';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN loan.borrno IS
+  2      'The borrower id number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN loan.loanactualreturndate IS
+  2      'The actual return date of the book';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE loan
+  2      ADD CONSTRAINT loan_pk PRIMARY KEY ( copybarcodeno,
+  3      borrno,
+  4      loanreturndate );
+
+Table LOAN altered.
+
+SQL> 
+SQL> CREATE TABLE manager (
+  2      manno      NUMBER(7) NOT NULL,
+  3      manname    VARCHAR2(50) NOT NULL,
+  4      manphone   CHAR(10) NOT NULL,
+  5      brancode   NUMBER(3) NOT NULL
+  6  );
+
+Table MANAGER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN manager.manno IS
+  2      'The id of manager.';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN manager.manname IS
+  2      'The manager''s name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN manager.manphone IS
+  2      'The manager''s phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN manager.brancode IS
+  2      'The code of the branch';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE manager ADD CONSTRAINT manager_pk PRIMARY KEY ( manno );
+
+Table MANAGER altered.
+
+SQL> 
+SQL> CREATE TABLE publisher (
+  2      pubcode   NUMBER(7) NOT NULL,
+  3      pubname   VARCHAR2(50) NOT NULL
+  4  );
+
+Table PUBLISHER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN publisher.pubcode IS
+  2      'The publisher''s code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN publisher.pubname IS
+  2      'The publisher''s name';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE publisher ADD CONSTRAINT publisher_pk PRIMARY KEY ( pubcode );
+
+Table PUBLISHER altered.
+
+SQL> 
+SQL> CREATE TABLE reservation (
+  2      resdate         DATE NOT NULL,
+  3      copybarcodeno   NUMBER(15) NOT NULL,
+  4      borrno          NUMBER(7) NOT NULL
+  5  );
+
+Table RESERVATION created.
+
+SQL> 
+SQL> COMMENT ON COLUMN reservation.resdate IS
+  2      'The reservation date';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN reservation.copybarcodeno IS
+  2      'The barcode number of the copies';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN reservation.borrno IS
+  2      'The borrower id number';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE reservation
+  2      ADD CONSTRAINT reservation_pk PRIMARY KEY ( copybarcodeno,
+  3      resdate,
+  4      borrno );
+
+Table RESERVATION altered.
+
+SQL> 
+SQL> CREATE TABLE subject (
+  2      subname   VARCHAR2(50) NOT NULL
+  3  );
+
+Table SUBJECT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN subject.subname IS
+  2      'The subject name of the book';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE subject ADD CONSTRAINT subject_pk PRIMARY KEY ( subname );
+
+Table SUBJECT altered.
+
+SQL> 
+SQL> ALTER TABLE book
+  2      ADD CONSTRAINT book_publisher_fk FOREIGN KEY ( pubcode )
+  3          REFERENCES publisher ( pubcode );
+
+Table BOOK altered.
+
+SQL> 
+SQL> ALTER TABLE bookauthor
+  2      ADD CONSTRAINT bookauthor_author_fk FOREIGN KEY ( aucode )
+  3          REFERENCES author ( aucode );
+
+Table BOOKAUTHOR altered.
+
+SQL> 
+SQL> ALTER TABLE bookauthor
+  2      ADD CONSTRAINT bookauthor_book_fk FOREIGN KEY ( bookcallno )
+  3          REFERENCES book ( bookcallno );
+
+Table BOOKAUTHOR altered.
+
+SQL> 
+SQL> ALTER TABLE booksubject
+  2      ADD CONSTRAINT booksubject_book_fk FOREIGN KEY ( bookcallno )
+  3          REFERENCES book ( bookcallno );
+
+Table BOOKSUBJECT altered.
+
+SQL> 
+SQL> ALTER TABLE booksubject
+  2      ADD CONSTRAINT booksubject_subject_fk FOREIGN KEY ( subname )
+  3          REFERENCES subject ( subname );
+
+Table BOOKSUBJECT altered.
+
+SQL> 
+SQL> ALTER TABLE borrower
+  2      ADD CONSTRAINT borrower_borrclassification_fk FOREIGN KEY ( borrclass )
+  3          REFERENCES borrclassification ( borrclass )
+  4              ON DELETE CASCADE;
+
+Table BORROWER altered.
+
+SQL> 
+SQL> ALTER TABLE borrower
+  2      ADD CONSTRAINT borrower_branch_fk FOREIGN KEY ( brancode )
+  3          REFERENCES branch ( brancode );
+
+Table BORROWER altered.
+
+SQL> 
+SQL> ALTER TABLE branch
+  2      ADD CONSTRAINT branch_manager_fk FOREIGN KEY ( manno )
+  3          REFERENCES manager ( manno );
+
+Table BRANCH altered.
+
+SQL> 
+SQL> ALTER TABLE copies
+  2      ADD CONSTRAINT copies_book_fk FOREIGN KEY ( bookcallno )
+  3          REFERENCES book ( bookcallno );
+
+Table COPIES altered.
+
+SQL> 
+SQL> ALTER TABLE copies
+  2      ADD CONSTRAINT copies_branch_fk FOREIGN KEY ( brancode )
+  3          REFERENCES branch ( brancode );
+
+Table COPIES altered.
+
+SQL> 
+SQL> ALTER TABLE fine
+  2      ADD CONSTRAINT fine_loan_fk FOREIGN KEY ( copybarcodeno,
+  3      borrno,
+  4      loanreturndate )
+  5          REFERENCES loan ( copybarcodeno,
+  6          borrno,
+  7          loanreturndate );
+
+Table FINE altered.
+
+SQL> 
+SQL> ALTER TABLE isbn
+  2      ADD CONSTRAINT isbn_book_fk FOREIGN KEY ( bookcallno )
+  3          REFERENCES book ( bookcallno )
+  4              ON DELETE CASCADE;
+
+Table ISBN altered.
+
+SQL> 
+SQL> ALTER TABLE loan
+  2      ADD CONSTRAINT loan_borrower_fk FOREIGN KEY ( borrno )
+  3          REFERENCES borrower ( borrno );
+
+Table LOAN altered.
+
+SQL> 
+SQL> ALTER TABLE loan
+  2      ADD CONSTRAINT loan_copies_fk FOREIGN KEY ( copybarcodeno )
+  3          REFERENCES copies ( copybarcodeno );
+
+Table LOAN altered.
+
+SQL> 
+SQL> ALTER TABLE manager
+  2      ADD CONSTRAINT manager_branch_fk FOREIGN KEY ( brancode )
+  3          REFERENCES branch ( brancode );
+
+Table MANAGER altered.
+
+SQL> 
+SQL> ALTER TABLE reservation
+  2      ADD CONSTRAINT reservation_borrower_fk FOREIGN KEY ( borrno )
+  3          REFERENCES borrower ( borrno )
+  4              ON DELETE CASCADE;
+
+Table RESERVATION altered.
+
+SQL> 
+SQL> ALTER TABLE reservation
+  2      ADD CONSTRAINT reservation_copies_fk FOREIGN KEY ( copybarcodeno )
+  3          REFERENCES copies ( copybarcodeno )
+  4              ON DELETE CASCADE;
+
+Table RESERVATION altered.
+
+SQL> 
+SQL> CREATE SEQUENCE author_aucode_seq START WITH 1 NOCACHE ORDER;
+
+Sequence AUTHOR_AUCODE_SEQ created.
+
+SQL> 
+SQL> CREATE SEQUENCE borrower_borrno_seq START WITH 1 NOCACHE ORDER;
+
+Sequence BORROWER_BORRNO_SEQ created.
+
+SQL> 
+SQL> CREATE SEQUENCE branch_brancode_seq START WITH 100 NOCACHE ORDER;
+
+Sequence BRANCH_BRANCODE_SEQ created.
+
+SQL> 
+SQL> CREATE SEQUENCE seq_manno START WITH 1 NOCACHE ORDER;
+
+Sequence SEQ_MANNO created.
+
+SQL> 
+SQL> CREATE SEQUENCE publisher_pubcode_seq START WITH 1 NOCACHE ORDER;
+
+Sequence PUBLISHER_PUBCODE_SEQ created.
+
+SQL> 
+SQL> SET ECHO OFF

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0E72866E-4D77-3BCA-ED9D-3F72B0145B3E" containerWithKeyObject="D1D6DCA2-7BCF-6F7A-0C35-F4B298BE15EB" localFKIndex="CA554CA4-8083-EC1B-587B-53053876AB06" name="LOAN_COPIES_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D076E72A-FC28-C1E4-E07B-755E449F634F</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>COPIES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F83D16DD-7F50-FD71-F5D2-9A19643EE6B2</referredTableID>
+<keyObject>D95A22B6-F92F-2B9A-FD70-5BE7B553B47D</keyObject>
+<referredKeyID>D95A22B6-F92F-2B9A-FD70-5BE7B553B47D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>copyBarcodeNo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

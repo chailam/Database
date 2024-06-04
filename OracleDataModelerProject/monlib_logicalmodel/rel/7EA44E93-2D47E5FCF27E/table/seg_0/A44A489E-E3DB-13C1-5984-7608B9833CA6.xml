@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A44A489E-E3DB-13C1-5984-7608B9833CA6" name="BORROWER">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>A102491F-4287-58C5-E970-CA7BF7DE80C4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="borrNo" id="07FEF919-9CD5-CC39-488B-07E08FF986CF">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<generatorID>87F8E9DA-3FED-6131-6B25-12AD62921F74</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="borrName" id="6B548FD5-A57A-60BF-BAC9-15F81DD8AB18">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The name of the borrower</commentInRDBMS>
+<generatorID>7E6A6255-6FA2-AC02-D1BB-42457A5566CE</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="borrAddress" id="5B1B74C5-0EB4-0248-0C6D-EDDF8548F75A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The address of the borrower</commentInRDBMS>
+<generatorID>EEEDFC34-1AE3-3965-FD5A-9665CBB0830D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="borrFlag" id="4A54FD03-749D-3553-9C62-2B4DC8BFC102">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The status of borrower to determine he/she can borrow a book or not</commentInRDBMS>
+<generatorID>52530A3F-CC70-BACE-D739-A5B03929FB99</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="borrClass" id="CC1EE716-8406-C325-9751-9C070AB697DE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The classification of borrower(Junior, Adult, Organisation)</commentInRDBMS>
+<generatorID>05E6140C-137A-D112-29ED-90BEF7DC7EB5</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D693A92-552B-0F53-1B69-5DF9473A9E3A" referredColumn="85630DF2-CF53-765A-834B-A1C7016834DF"/>
+</associations>
+</Column>
+<Column name="branCode" id="B8A6BF2F-803F-C6C4-6160-937AF5C0114B">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<generatorID>EB26BBC4-0C6E-B962-8FB5-65E9E2114FCE</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6BBF17B-571F-9881-8558-C7F5CC684117" referredColumn="1F95458B-E42E-EDAF-C89B-77F76C7BA407"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40FBDCF0-9AD0-0089-4014-33737AD7C774" name="BORROWER_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>A5C56B51-C948-3A8C-DDE6-3FF36F4175F6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07FEF919-9CD5-CC39-488B-07E08FF986CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9FFF230A-86AA-3115-CD8E-1F2EDAE70144" name="BORROWER_BORRCLASSIFICATION_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>4E218469-FDBA-F17A-D54F-B2EB2AA00DED</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC1EE716-8406-C325-9751-9C070AB697DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="00C53196-16F2-3474-E621-546E6FD4B7C3" name="BORROWER_BRANCH_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>1AE5A93F-BB32-4CEA-20D0-FAB3ADED46D6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8A6BF2F-803F-C6C4-6160-937AF5C0114B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

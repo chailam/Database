@@ -1,0 +1,176 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1EABEE4D-F561-E990-0681-623719922792" name="BOOK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>8D6B0EBF-2154-5444-BE1A-60A64E83B98E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bookCallNo" id="910A9788-C540-F741-2B97-41790C8B63F4">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>DDD5A8AB-B03D-976C-4406-3C8BC01FAF2D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookTitle" id="661551A0-2984-13C1-E618-395971A36A10">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The title of the book</commentInRDBMS>
+<generatorID>C46D231F-2EEC-634B-50EC-4BA714465EC2</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookDescription" id="8B111123-0AE6-EF9E-94EA-D5646DF775E7">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The description of the book</commentInRDBMS>
+<generatorID>473BDCA5-726D-E429-379B-928F450FBE58</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookPubYear" id="9AA8D264-1A53-B992-4A89-1910E67E3C8F">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The publication year of book</commentInRDBMS>
+<generatorID>EE9C9EDE-5BC7-7578-1C6E-08EB4FB4CF36</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookPrice" id="0471AB40-4E59-F75A-9C21-94E652914D56">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The price of book</commentInRDBMS>
+<generatorID>F7AB0E7A-5CB0-4FC8-6EC1-43497BD11BF1</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookPrice</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="bookPrice &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookNumberPages" id="3B26F620-5333-47A3-7068-D5E71D4D7C56">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The total number of pages of a book</commentInRDBMS>
+<generatorID>40B39C89-0244-E7ED-581E-490B66B1AE3D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookNumberPages</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="bookNumberPages &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookClassification" id="D3D26FB2-34D3-AE3C-B29F-566CA11AF502">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The classification of a  book (Reference or Fiction)</commentInRDBMS>
+<generatorID>2F150D50-5C6E-6FEB-BA4E-DC8EA42A94E2</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookReadingLevel" id="440A6B9C-FB37-6BB0-C576-2BCEE3095C92">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>For a Fiction title, the reading level of the book</commentInRDBMS>
+<generatorID>5EFFE0DF-2ED3-887A-1F25-A9CC6E5E669E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookReadingLevel</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>30</endValue>
+<description>Reading Level of Fiction classification</description>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="pubCode" id="D2709285-285D-BDDE-6FED-6034D224D720">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The publisher&apos;s code</commentInRDBMS>
+<generatorID>AB03F201-4F62-56E8-F426-41347457004A</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4FA7286-0284-C086-A43E-80703567C192" referredColumn="55C24540-36CC-599E-D9EF-3A3A5A3638F1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C981D6D1-6111-3366-1ABC-B6704001EE67" name="BOOK_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>A5059BA9-BF4C-77A1-C957-EB1272650BDC</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="910A9788-C540-F741-2B97-41790C8B63F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8130160B-79C8-42C5-2B73-6BBF5B062230" name="BOOK_PUBLISHER_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D9CA8ED2-9D3B-C26A-4812-7C24D66B265E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2709285-285D-BDDE-6FED-6034D224D720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="535FD509-136E-93CC-AE0D-CFA7B86225C5" name="MANAGER">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<generatorID>0B3CD1B6-E546-A26E-4792-136383F3520E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="manNo" id="61B2EBA9-0FA3-28AF-CF29-A61A3D09D55A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<generatorID>9496D4E1-9925-0DED-C5BC-265B59EFA7F5</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>seq_manNo</autoIncrementSequenceName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="manName" id="253D15FB-1B67-76EC-8AF8-80F2F7F156CD">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s name</commentInRDBMS>
+<generatorID>AD16F477-3BE2-1FE9-83A8-5CA52640E8F9</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manPhone" id="B1887EA9-22B7-AF33-073A-CDE8593E2E14">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s phone number</commentInRDBMS>
+<generatorID>79346ED1-A4BE-2A29-F145-B71183CDE249</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manHomeBranch" id="998218EB-5BC6-F5CA-7018-A491560A35DD">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:37:53 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s home branch</commentInRDBMS>
+<generatorID>364D3A60-62EA-FDD4-3338-EE5C348ED84E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E67A32D0-34F5-CFEE-B9C8-2A73E4D0B7D6" referredColumn="A1F5ECC5-A701-ECE9-A6B2-6064F1112F0D"/>
+</associations>
+</Column>
+<Column name="manBranch" id="AC1F7C6B-F19B-768C-F801-9D257E0F1312">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:37:53 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s branch</commentInRDBMS>
+<generatorID>55D0F45F-9094-24B2-0686-071F368EC5A6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BRANCH_branCode" id="0D03F52A-95AB-5B9F-F6C4-A26D502150B9">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:42:15 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC5D41A9-85DD-27B4-DC7B-C229B138B0D1" referredColumn="A1F5ECC5-A701-ECE9-A6B2-6064F1112F0D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5F106464-5B23-432A-9C20-2F383BF28873" name="MANAGER_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<generatorID>34402306-98DE-A135-385F-437D9EA042ED</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61B2EBA9-0FA3-28AF-CF29-A61A3D09D55A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3B9DFC1-EFC8-5086-F01B-DFCA2B37CFE7" name="MANAGER_BRANCH_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:42:15 UTC</createdTime>
+<generatorID>70426F39-75AE-2CE2-C33D-AFD1B33B1F4C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D03F52A-95AB-5B9F-F6C4-A26D502150B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="627EC9F6-72AF-BF00-0771-9475A9A1B08C" name="MANAGER_BRANCH_home_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:50:00 UTC</createdTime>
+<generatorID>70426F39-75AE-2CE2-C33D-AFD1B33B1F4C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998218EB-5BC6-F5CA-7018-A491560A35DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

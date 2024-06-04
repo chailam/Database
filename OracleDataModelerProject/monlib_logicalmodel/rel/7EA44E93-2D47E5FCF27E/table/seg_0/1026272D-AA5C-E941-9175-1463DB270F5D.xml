@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1026272D-AA5C-E941-9175-1463DB270F5D" name="FINE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>90447F2A-B71A-CB90-F439-AD4199DD5190</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="copyBarcodeNo" id="35A910EA-7384-2DAA-688F-04570CFC470E">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>27C182E6-1401-0981-BB9E-99E24FD5299A</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC85A53B-8F11-149C-7570-E492ADA7CE34" referredColumn="C7A77AC3-4580-1A08-A5DA-A546FF418D5A"/>
+</associations>
+</Column>
+<Column name="borrNo" id="F05650F0-6C31-CD4B-F888-CC9B6B4D604F">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<generatorID>756E1747-4E89-C0AD-D7F5-7EF5D0713335</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC85A53B-8F11-149C-7570-E492ADA7CE34" referredColumn="8B800C74-CC05-73BB-F7A2-A9316F59F0FE"/>
+</associations>
+</Column>
+<Column name="loanReturnDate" id="81DDE6FD-D112-3481-95C9-F358B2A1C62E">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The return date of the loan</commentInRDBMS>
+<generatorID>DE976ACE-7D7F-B012-DEB2-9BD99F3E740B</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FC85A53B-8F11-149C-7570-E492ADA7CE34" referredColumn="E12471D3-E588-0D9E-F457-AE325F3AF8E7"/>
+</associations>
+</Column>
+<Column name="finePaymentDate" id="BF0CAD0D-A6FD-203C-3F5C-9DD12750484E">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The payment date when the borrower pay the fine</commentInRDBMS>
+<generatorID>407D75AA-1FED-706F-BA93-5DDD094997E5</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fineAmount" id="4D92E6C5-3FF8-7D93-BBD6-300C36BB61A3">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The fine amount</commentInRDBMS>
+<generatorID>24538FCE-3D02-A9E0-5A7D-644DC26AD303</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_fineAmount</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="fineAmount &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AD1765E3-E428-18EF-D602-5FF596695073" name="FINE_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>AA5A0011-15C4-8DB8-4F9C-D8368304D46A</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35A910EA-7384-2DAA-688F-04570CFC470E"/>
+<colUsage columnID="F05650F0-6C31-CD4B-F888-CC9B6B4D604F"/>
+<colUsage columnID="81DDE6FD-D112-3481-95C9-F358B2A1C62E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="590DDF82-FE28-9DCE-4979-AD26DA3C0B04" name="FINE_LOAN_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>EEA4B88F-EAF5-02F0-9B54-4E467999A7BF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35A910EA-7384-2DAA-688F-04570CFC470E"/>
+<colUsage columnID="F05650F0-6C31-CD4B-F888-CC9B6B4D604F"/>
+<colUsage columnID="81DDE6FD-D112-3481-95C9-F358B2A1C62E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

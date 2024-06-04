@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1D6DCA2-7BCF-6F7A-0C35-F4B298BE15EB" name="LOAN">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>8B9C6AFB-7D5A-930A-B140-DE0E2276F508</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="copyBarcodeNo" id="C7A77AC3-4580-1A08-A5DA-A546FF418D5A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>D08660B5-5002-5171-C2E4-2F9EAB010694</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E72866E-4D77-3BCA-ED9D-3F72B0145B3E" referredColumn="6BEF88C5-2EB3-65A7-4086-861F6B6ED00B"/>
+</associations>
+</Column>
+<Column name="loanReturnDate" id="E12471D3-E588-0D9E-F457-AE325F3AF8E7">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The return date of the loan</commentInRDBMS>
+<generatorID>97894990-3EE0-5604-BE58-FC385EB73FCF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="borrNo" id="8B800C74-CC05-73BB-F7A2-A9316F59F0FE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<generatorID>5CD05F38-EB48-78BA-499D-C311E0E5A9A4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3DCF86A-A6A3-46A2-63D1-90EFD331FC82" referredColumn="07FEF919-9CD5-CC39-488B-07E08FF986CF"/>
+</associations>
+</Column>
+<Column name="loanActualReturnDate" id="8FE9889B-3BBD-1EF7-F69D-0BD33E683777">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The actual return date of the book</commentInRDBMS>
+<generatorID>7FF162C4-95D9-771E-8196-C2CDCC8BABA6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC0B93D5-04E8-C325-0E95-B70C43FD68B3" name="LOAN_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>5259EFE2-6AD5-BAA2-15F4-2430525A5B57</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7A77AC3-4580-1A08-A5DA-A546FF418D5A"/>
+<colUsage columnID="8B800C74-CC05-73BB-F7A2-A9316F59F0FE"/>
+<colUsage columnID="E12471D3-E588-0D9E-F457-AE325F3AF8E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31171048-419B-2600-F225-6829A6B20CB7" name="LOAN_BORROWER_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D47680DD-2AA3-8A05-D4B5-143AE9487A64</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B800C74-CC05-73BB-F7A2-A9316F59F0FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA554CA4-8083-EC1B-587B-53053876AB06" name="LOAN_COPIES_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D076E72A-FC28-C1E4-E07B-755E449F634F</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7A77AC3-4580-1A08-A5DA-A546FF418D5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

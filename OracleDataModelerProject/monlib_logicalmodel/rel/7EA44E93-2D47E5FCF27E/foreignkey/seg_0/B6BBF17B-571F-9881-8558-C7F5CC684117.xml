@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B6BBF17B-571F-9881-8558-C7F5CC684117" containerWithKeyObject="A44A489E-E3DB-13C1-5984-7608B9833CA6" localFKIndex="00C53196-16F2-3474-E621-546E6FD4B7C3" name="BORROWER_BRANCH_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>1AE5A93F-BB32-4CEA-20D0-FAB3ADED46D6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>BRANCH</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F9E7EEFF-0EA8-116C-1F36-AF33B2D95FDD</referredTableID>
+<keyObject>653BD137-F9CE-1AB1-2AB8-EA327408E68C</keyObject>
+<referredKeyID>653BD137-F9CE-1AB1-2AB8-EA327408E68C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>branCode</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

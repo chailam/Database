@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="borrower has loan" directorySegmentName="seg_0" id="D47680DD-2AA3-8A05-D4B5-143AE9487A64">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:12:01 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<sourcePk>A5C56B51-C948-3A8C-DDE6-3FF36F4175F6</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget>from</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A102491F-4287-58C5-E970-CA7BF7DE80C4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8B9C6AFB-7D5A-930A-B140-DE0E2276F508</targetEntity>
+<transferable>true</transferable>
+</Relation>

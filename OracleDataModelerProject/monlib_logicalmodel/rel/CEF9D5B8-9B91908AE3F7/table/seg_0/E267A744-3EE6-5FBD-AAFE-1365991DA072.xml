@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E267A744-3EE6-5FBD-AAFE-1365991DA072" name="BRANCH">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<generatorID>32E00F67-6236-3B2C-7DB9-3993387B178C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="branCode" id="A1F5ECC5-A701-ECE9-A6B2-6064F1112F0D">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<generatorID>FDDB2F22-D8DA-4FB3-BD0C-20FF76CA80CF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branName" id="EAE581B9-931F-2D71-92A5-626961548299">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The name of the branch</commentInRDBMS>
+<generatorID>7713A3A7-E8A0-8A88-FBDA-C7A81C3EE307</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branAddress" id="A9E7C0F1-2FC3-49DB-0E7D-DE460ABD3CCF">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The address of the branch</commentInRDBMS>
+<generatorID>E41C5F98-DC67-CF37-7317-6F582F759029</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="branPhone" id="80476715-C074-9734-D6D9-2F14940A61F7">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<commentInRDBMS>The phone number of the branch</commentInRDBMS>
+<generatorID>065C13FC-0FD3-2EE3-7059-AB2A8B1F0303</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MANAGER_manNo" id="1C6DC3F0-C1A3-E9CF-2425-7D74397E4D06">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:37:53 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<generatorID>80E65B8D-AD8E-C229-2F84-00A257DE2602</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="230ABBA1-6040-C0EB-2568-A40D0B68C022" referredColumn="61B2EBA9-0FA3-28AF-CF29-A61A3D09D55A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F47D38ED-4521-9591-28AA-42BB9B2B40CC" name="BRANCH_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:11:38 UTC</createdTime>
+<generatorID>70426F39-75AE-2CE2-C33D-AFD1B33B1F4C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1F5ECC5-A701-ECE9-A6B2-6064F1112F0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73AF4391-6A78-51CF-4A86-648E127F9442" name="BRANCH_MANAGER_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:37:53 UTC</createdTime>
+<generatorID>1DD2F1CC-A224-1630-D002-C91CE9C14B5D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C6DC3F0-C1A3-E9CF-2425-7D74397E4D06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

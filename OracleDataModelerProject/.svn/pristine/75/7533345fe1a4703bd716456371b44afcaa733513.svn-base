@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A102491F-4287-58C5-E970-CA7BF7DE80C4" name="BORROWER">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:30:50 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="borrNo" id="87F8E9DA-3FED-6131-6B25-12AD62921F74">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:31:52 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrName" id="7E6A6255-6FA2-AC02-D1BB-42457A5566CE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:32:22 UTC</createdTime>
+<commentInRDBMS>The name of the borrower</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrAddress" id="EEEDFC34-1AE3-3965-FD5A-9665CBB0830D">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:33:05 UTC</createdTime>
+<commentInRDBMS>The address of the borrower</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrFlag" id="52530A3F-CC70-BACE-D739-A5B03929FB99">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:33:43 UTC</createdTime>
+<commentInRDBMS>The status of borrower to determine he/she can borrow a book or not</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrClass" id="05E6140C-137A-D112-29ED-90BEF7DC7EB5">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:38:35 UTC</createdTime>
+<commentInRDBMS>The classification of borrower(Junior, Adult, Organisation)</commentInRDBMS>
+<generatorID>4E218469-FDBA-F17A-D54F-B2EB2AA00DED</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>ECAD9D61-EAA1-AF35-300C-BA58336FB181</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branCode" id="EB26BBC4-0C6E-B962-8FB5-65E9E2114FCE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:39:24 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<generatorID>1AE5A93F-BB32-4CEA-20D0-FAB3ADED46D6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>FDDB2F22-D8DA-4FB3-BD0C-20FF76CA80CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A5C56B51-C948-3A8C-DDE6-3FF36F4175F6" name="BORROWER PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:31:59 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87F8E9DA-3FED-6131-6B25-12AD62921F74</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

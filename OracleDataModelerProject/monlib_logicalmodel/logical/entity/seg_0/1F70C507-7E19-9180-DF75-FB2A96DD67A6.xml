@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1F70C507-7E19-9180-DF75-FB2A96DD67A6" name="ISBN">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:51:12 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ISBNCode" id="354BB3A9-B9E7-01EF-A5E6-8948505E1223">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:51:19 UTC</createdTime>
+<commentInRDBMS>The ISBN code of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookCallNo" id="529CB8EF-791F-625B-64E9-D974C51B2709">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:00:50 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>35D3F904-C88B-E1FE-E217-E5D78802FCD7</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>DDD5A8AB-B03D-976C-4406-3C8BC01FAF2D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="106A4C8E-90F6-7A7D-C573-471516101637" name="ISBN PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:51:27 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>354BB3A9-B9E7-01EF-A5E6-8948505E1223</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

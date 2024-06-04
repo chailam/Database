@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D6B0EBF-2154-5444-BE1A-60A64E83B98E" name="BOOK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:40:19 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="bookCallNo" id="DDD5A8AB-B03D-976C-4406-3C8BC01FAF2D">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:40:28 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookTitle" id="C46D231F-2EEC-634B-50EC-4BA714465EC2">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:41:21 UTC</createdTime>
+<commentInRDBMS>The title of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookDescription" id="473BDCA5-726D-E429-379B-928F450FBE58">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:42:04 UTC</createdTime>
+<commentInRDBMS>The description of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookPubYear" id="EE9C9EDE-5BC7-7578-1C6E-08EB4FB4CF36">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:42:37 UTC</createdTime>
+<commentInRDBMS>The publication year of book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookPrice" id="F7AB0E7A-5CB0-4FC8-6EC1-43497BD11BF1">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:43:27 UTC</createdTime>
+<commentInRDBMS>The price of book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookPrice</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="bookPrice &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookNumberPages" id="40B39C89-0244-E7ED-581E-490B66B1AE3D">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:45:57 UTC</createdTime>
+<commentInRDBMS>The total number of pages of a book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookNumberPages</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="bookNumberPages &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookClassification" id="2F150D50-5C6E-6FEB-BA4E-DC8EA42A94E2">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:46:27 UTC</createdTime>
+<commentInRDBMS>The classification of a  book (Reference or Fiction)</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bookReadingLevel" id="5EFFE0DF-2ED3-887A-1F25-A9CC6E5E669E">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:47:28 UTC</createdTime>
+<commentInRDBMS>For a Fiction title, the reading level of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_bookReadingLevel</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>30</endValue>
+<description>Reading Level of Fiction classification</description>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="pubCode" id="AB03F201-4F62-56E8-F426-41347457004A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:05:27 UTC</createdTime>
+<commentInRDBMS>The publisher&apos;s code</commentInRDBMS>
+<generatorID>D9CA8ED2-9D3B-C26A-4812-7C24D66B265E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>23B635C5-3342-330E-E4B0-608F2A479DEB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A5059BA9-BF4C-77A1-C957-EB1272650BDC" name="BOOK PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:40:41 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DDD5A8AB-B03D-976C-4406-3C8BC01FAF2D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

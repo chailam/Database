@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F998953E-9EAF-6A18-6126-771E19CD222E" name="BOOKSUBJECT">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:49:34 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="bookCallNo" id="39B8291F-9BA0-7981-8B73-6E4EFE26A645">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:04:09 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>563930EA-97F8-0012-3BAA-915FAC5F4B8D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>DDD5A8AB-B03D-976C-4406-3C8BC01FAF2D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="subName" id="0EF367C9-48BF-F6B0-D997-D4B19BEFEAA3">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:04:53 UTC</createdTime>
+<commentInRDBMS>The subject name of the book</commentInRDBMS>
+<generatorID>48254500-FDB0-9416-53FA-BE270852A18E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>D8E13766-7402-F14B-BF02-860E214232CC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2B17E518-3CAC-DBD1-C70E-F7F9B5E671DF" name="BOOKSUBJECT PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:49:49 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>39B8291F-9BA0-7981-8B73-6E4EFE26A645</attributeRef>
+<attributeRef>0EF367C9-48BF-F6B0-D997-D4B19BEFEAA3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

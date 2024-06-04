@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="written" directorySegmentName="seg_0" id="3ECD8235-2958-482D-10FE-64EFBEB97B5C">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:01:58 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<sourcePk>A5059BA9-BF4C-77A1-C957-EB1272650BDC</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>written by</nameOnSource>
+<nameOnTarget>write</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8D6B0EBF-2154-5444-BE1A-60A64E83B98E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E0610031-2FD5-EB13-5909-F714BA9AA08A</targetEntity>
+<transferable>true</transferable>
+</Relation>

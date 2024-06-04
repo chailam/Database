@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7126B99B-B247-4C28-623D-9D4187270B5B" name="ISBN">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>1F70C507-7E19-9180-DF75-FB2A96DD67A6</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ISBNCode" id="AC4358F6-16F8-ACBF-C01D-86F08C93F588">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The ISBN code of the book</commentInRDBMS>
+<generatorID>354BB3A9-B9E7-01EF-A5E6-8948505E1223</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookCallNo" id="74EB43E4-9D9C-BD8C-AF92-D7B4A3499DAE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>529CB8EF-791F-625B-64E9-D974C51B2709</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31874788-FF98-4B35-7A8A-E0527FA9C890" referredColumn="910A9788-C540-F741-2B97-41790C8B63F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="954DDDD3-C499-0C36-A323-0A20195B42F9" name="ISBN_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>106A4C8E-90F6-7A7D-C573-471516101637</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC4358F6-16F8-ACBF-C01D-86F08C93F588"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EA30EF7-37DF-7463-49A5-442076160BEA" name="ISBN_BOOK_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>35D3F904-C88B-E1FE-E217-E5D78802FCD7</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74EB43E4-9D9C-BD8C-AF92-D7B4A3499DAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

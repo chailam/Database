@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="32E00F67-6236-3B2C-7DB9-3993387B178C" name="BRANCH">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:21:13 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="branCode" id="FDDB2F22-D8DA-4FB3-BD0C-20FF76CA80CF">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:21:27 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branName" id="7713A3A7-E8A0-8A88-FBDA-C7A81C3EE307">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:23:14 UTC</createdTime>
+<commentInRDBMS>The name of the branch</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branAddress" id="E41C5F98-DC67-CF37-7317-6F582F759029">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:23:54 UTC</createdTime>
+<commentInRDBMS>The address of the branch</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branPhone" id="065C13FC-0FD3-2EE3-7059-AB2A8B1F0303">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:26:27 UTC</createdTime>
+<commentInRDBMS>The phone number of the branch</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MANAGER manNo" id="80E65B8D-AD8E-C229-2F84-00A257DE2602">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:35:01 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<generatorID>1DD2F1CC-A224-1630-D002-C91CE9C14B5D</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<referedAttribute>9496D4E1-9925-0DED-C5BC-265B59EFA7F5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manNo" id="CCBC3C0F-7500-A672-8205-FEF82597108A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:52:26 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<generatorID>C664AACE-33C8-D323-825D-08FD97B15997</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<referedAttribute>9496D4E1-9925-0DED-C5BC-265B59EFA7F5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manNo1" id="A71E2133-F996-50DA-FE86-1DB4F3632793">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 21:55:37 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<generatorID>FE66CB7B-5071-E6D7-A668-48C270403D46</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="true"/>
+</engineerTo>
+<referedAttribute>9496D4E1-9925-0DED-C5BC-265B59EFA7F5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="70426F39-75AE-2CE2-C33D-AFD1B33B1F4C" name="BRANCH PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:21:35 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="CEF9D5B8-8437-9605-3B8D-9B91908AE3F7" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FDDB2F22-D8DA-4FB3-BD0C-20FF76CA80CF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

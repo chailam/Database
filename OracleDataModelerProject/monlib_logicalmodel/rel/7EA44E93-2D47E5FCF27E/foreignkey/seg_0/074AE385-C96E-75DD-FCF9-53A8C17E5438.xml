@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="074AE385-C96E-75DD-FCF9-53A8C17E5438" containerWithKeyObject="7D992F89-558F-109E-3054-8D76AEC7CBE4" localFKIndex="8BD84FA2-39AA-DD2E-DB05-F13B04433ABF" name="BOOKAUTHOR_AUTHOR_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>C307CB5D-4C03-C8AB-3DCB-1637CC8543DA</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>AUTHOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F4B2B1C6-9B90-938B-EE9F-BB42278AFE63</referredTableID>
+<keyObject>B9B12137-E37D-2833-13B5-44405EFECCBB</keyObject>
+<referredKeyID>B9B12137-E37D-2833-13B5-44405EFECCBB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>auCode</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

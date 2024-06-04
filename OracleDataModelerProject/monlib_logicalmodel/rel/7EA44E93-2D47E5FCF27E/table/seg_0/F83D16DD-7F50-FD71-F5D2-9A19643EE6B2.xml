@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F83D16DD-7F50-FD71-F5D2-9A19643EE6B2" name="COPIES">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>9A4C33D3-63E3-438B-23FA-1C5147BAB705</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="copyBarcodeNo" id="6BEF88C5-2EB3-65A7-4086-861F6B6ED00B">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>593406AE-0132-0639-0148-D5DDA038BD53</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="statusFlag" id="67F2E927-F4D1-9B55-2AAD-EE82692DC1BC">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The flag of the copies to indicate if it is on counter reserve or not</commentInRDBMS>
+<generatorID>F8D189C1-AB89-C56F-E5A4-C53FD8D6EEF5</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bookCallNo" id="C6F4D17E-637E-049A-3B33-54DDD78941B8">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>29356108-6F07-972D-881A-067A24A0AC3E</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A226C7FF-2E14-B74D-4477-22ECBF4BC366" referredColumn="910A9788-C540-F741-2B97-41790C8B63F4"/>
+</associations>
+</Column>
+<Column name="branCode" id="E7BB6A97-65E0-7BB4-F775-16079EF73AC7">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<generatorID>D2D391DE-5885-3A0A-05B4-12B9AE9D1BE0</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F555FAC-3C94-8106-F85C-DFC9353168ED" referredColumn="1F95458B-E42E-EDAF-C89B-77F76C7BA407"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D95A22B6-F92F-2B9A-FD70-5BE7B553B47D" name="COPIES_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D87CE7CE-67A3-22CD-D13C-AF63EB40B5A4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BEF88C5-2EB3-65A7-4086-861F6B6ED00B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AADEF87-F206-24A3-2A7A-889CE231D5CA" name="COPIES_BOOK_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>E25B3DB5-16D9-E44A-C484-E88B8F0DD170</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6F4D17E-637E-049A-3B33-54DDD78941B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C3D42B5-5B35-564A-AD7A-F08AC5724896" name="COPIES_BRANCH_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>B481E2A9-C72C-D8CF-6069-EC965FD3B2D4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7BB6A97-65E0-7BB4-F775-16079EF73AC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

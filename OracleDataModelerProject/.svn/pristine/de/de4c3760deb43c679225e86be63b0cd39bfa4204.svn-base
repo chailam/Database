@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="DB1086AA-BEF6-9996-C82D-66A98AEFFDB1">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 19:52:11 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

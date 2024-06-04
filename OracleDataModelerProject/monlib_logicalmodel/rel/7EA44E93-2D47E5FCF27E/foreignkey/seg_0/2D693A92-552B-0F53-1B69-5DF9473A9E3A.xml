@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2D693A92-552B-0F53-1B69-5DF9473A9E3A" containerWithKeyObject="A44A489E-E3DB-13C1-5984-7608B9833CA6" localFKIndex="9FFF230A-86AA-3115-CD8E-1F2EDAE70144" name="BORROWER_BORRCLASSIFICATION_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>4E218469-FDBA-F17A-D54F-B2EB2AA00DED</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>BORRCLASSIFICATION</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>E81D4BEA-103F-0FA3-DE45-B1D89B660651</referredTableID>
+<keyObject>DA032B10-E3FB-6D17-4607-52A172151096</keyObject>
+<referredKeyID>DA032B10-E3FB-6D17-4607-52A172151096</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>borrClass</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

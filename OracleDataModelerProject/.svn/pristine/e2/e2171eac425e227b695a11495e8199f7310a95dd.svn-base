@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79B25570-8719-078C-9130-F793C5D5F859" name="RESERVATION">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:56:58 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="resDate" id="C9A2164C-083A-06FC-5E56-A2DB1B12B3DC">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:57:07 UTC</createdTime>
+<commentInRDBMS>The reservation date</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="copyBarcodeNo" id="796C99C0-1CCD-95B0-9B08-024470CCB3D2">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:06:52 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>AF381398-02AF-911A-96B6-7B54322F5D77</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>593406AE-0132-0639-0148-D5DDA038BD53</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrNo" id="7B7E6C65-A264-BC43-3EB5-B71E3FE6EB3C">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:15:03 UTC</createdTime>
+<commentInRDBMS>The borrower identified number</commentInRDBMS>
+<generatorID>051632A2-49D8-2E77-412E-7BD86AE8DBAA</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>87F8E9DA-3FED-6131-6B25-12AD62921F74</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D763C334-A597-EEBE-16C6-661DC99D403B" name="RESERVATION PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:06:52 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>796C99C0-1CCD-95B0-9B08-024470CCB3D2</attributeRef>
+<attributeRef>C9A2164C-083A-06FC-5E56-A2DB1B12B3DC</attributeRef>
+<attributeRef>7B7E6C65-A264-BC43-3EB5-B71E3FE6EB3C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

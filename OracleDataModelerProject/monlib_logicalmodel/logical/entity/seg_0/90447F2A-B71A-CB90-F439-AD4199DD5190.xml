@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90447F2A-B71A-CB90-F439-AD4199DD5190" name="FINE">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:59:11 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="copyBarcodeNo" id="27C182E6-1401-0981-BB9E-99E24FD5299A">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:13:36 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>EEA4B88F-EAF5-02F0-9B54-4E467999A7BF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>D08660B5-5002-5171-C2E4-2F9EAB010694</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrNo" id="756E1747-4E89-C0AD-D7F5-7EF5D0713335">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:13:36 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<generatorID>EEA4B88F-EAF5-02F0-9B54-4E467999A7BF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>5CD05F38-EB48-78BA-499D-C311E0E5A9A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loanReturnDate" id="DE976ACE-7D7F-B012-DEB2-9BD99F3E740B">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:13:36 UTC</createdTime>
+<commentInRDBMS>The return date of the loan</commentInRDBMS>
+<generatorID>EEA4B88F-EAF5-02F0-9B54-4E467999A7BF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>97894990-3EE0-5604-BE58-FC385EB73FCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="finePaymentDate" id="407D75AA-1FED-706F-BA93-5DDD094997E5">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:59:14 UTC</createdTime>
+<commentInRDBMS>The payment date when the borrower pay the fine</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fineAmount" id="24538FCE-3D02-A9E0-5A7D-644DC26AD303">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:59:54 UTC</createdTime>
+<commentInRDBMS>The fine amount</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_fineAmount</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="fineAmount &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AA5A0011-15C4-8DB8-4F9C-D8368304D46A" name="FINE PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:59:23 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>27C182E6-1401-0981-BB9E-99E24FD5299A</attributeRef>
+<attributeRef>756E1747-4E89-C0AD-D7F5-7EF5D0713335</attributeRef>
+<attributeRef>DE976ACE-7D7F-B012-DEB2-9BD99F3E740B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

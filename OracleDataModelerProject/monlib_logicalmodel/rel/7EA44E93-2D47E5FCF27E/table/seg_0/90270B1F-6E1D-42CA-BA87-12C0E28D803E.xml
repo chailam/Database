@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="90270B1F-6E1D-42CA-BA87-12C0E28D803E" name="RESERVATION">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>79B25570-8719-078C-9130-F793C5D5F859</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="resDate" id="30EA1FFF-2490-EDC9-DEA7-7E6DBB552254">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The reservation date</commentInRDBMS>
+<generatorID>C9A2164C-083A-06FC-5E56-A2DB1B12B3DC</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="copyBarcodeNo" id="81189AFE-0B24-B3AC-7F95-0F38372CD467">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>796C99C0-1CCD-95B0-9B08-024470CCB3D2</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D8B9D058-ACF4-CE53-A3B1-66B063E8C5E4" referredColumn="6BEF88C5-2EB3-65A7-4086-861F6B6ED00B"/>
+</associations>
+</Column>
+<Column name="borrNo" id="2587E40D-1ED9-9B11-D8B9-75AE8DB35733">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The borrower id number</commentInRDBMS>
+<generatorID>7B7E6C65-A264-BC43-3EB5-B71E3FE6EB3C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD150EFD-4F1A-EC3B-0D28-A56E95BBB901" referredColumn="07FEF919-9CD5-CC39-488B-07E08FF986CF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07AE7C23-99E4-41A3-95E1-07ADC6A9B585" name="RESERVATION_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>D763C334-A597-EEBE-16C6-661DC99D403B</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="81189AFE-0B24-B3AC-7F95-0F38372CD467"/>
+<colUsage columnID="30EA1FFF-2490-EDC9-DEA7-7E6DBB552254"/>
+<colUsage columnID="2587E40D-1ED9-9B11-D8B9-75AE8DB35733"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="42B17FBA-B2A5-820D-68E0-A03D32269F09" name="RESERVATION_COPIES_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>AF381398-02AF-911A-96B6-7B54322F5D77</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="81189AFE-0B24-B3AC-7F95-0F38372CD467"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0377C0B2-E29A-6B97-77EB-1EF6E5E576D2" name="RESERVATION_BORROWER_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>051632A2-49D8-2E77-412E-7BD86AE8DBAA</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2587E40D-1ED9-9B11-D8B9-75AE8DB35733"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

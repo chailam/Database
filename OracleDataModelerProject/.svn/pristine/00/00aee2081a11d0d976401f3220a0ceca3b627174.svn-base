@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<lastAddedObjects designName="monlib_logicalmodel" objectID="98C6814D-69B0-9120-AA8B-9DF09C0ED134">
+   <object objectID="E267A744-3EE6-5FBD-AAFE-1365991DA072" dmProperties=""/>
+   <object objectID="535FD509-136E-93CC-AE0D-CFA7B86225C5" dmProperties=""/>
+   <object objectID="F850E15A-44C6-31DA-58F2-83C046656077" dmProperties=""/>
+   <object objectID="E67A32D0-34F5-CFEE-B9C8-2A73E4D0B7D6" dmProperties=""/>
+   <object objectID="AC5D41A9-85DD-27B4-DC7B-C229B138B0D1" dmProperties=""/>
+   <object objectID="230ABBA1-6040-C0EB-2568-A40D0B68C022" dmProperties=""/>
+   <object objectID="C:\Users\user\Desktop\Database\DataModels\Assignment1\monlib_logicalmodel\rel" dmProperties=""/>
+   <object objectID="DeletedMap_RMCEF9D5B8-8437-9605-3B8D-9B91908AE3F7.xml" dmProperties=""/>
+   <object objectID="FE66CB7B-5071-E6D7-A668-48C270403D46" dmProperties="FE66CB7B-5071-E6D7-A668-48C270403D46:::oracle.dbtools.crest.model.design.logical.Relation:::DD0D4C7A-105D-7ECC-0342-FFFFE36798A5:::32E00F67-6236-3B2C-7DB9-3993387B178C:::0B3CD1B6-E546-A26E-4792-136383F3520E:::MANAGER BRANCH_smallbranch FK"/>
+   <object objectID="C664AACE-33C8-D323-825D-08FD97B15997" dmProperties="C664AACE-33C8-D323-825D-08FD97B15997:::oracle.dbtools.crest.model.design.logical.Relation:::DD0D4C7A-105D-7ECC-0342-FFFFE36798A5:::32E00F67-6236-3B2C-7DB9-3993387B178C:::0B3CD1B6-E546-A26E-4792-136383F3520E:::MANAGER_BRANCH_home_FK"/>
+   <object objectID="1DD2F1CC-A224-1630-D002-C91CE9C14B5D" dmProperties="1DD2F1CC-A224-1630-D002-C91CE9C14B5D:::oracle.dbtools.crest.model.design.logical.Relation:::DD0D4C7A-105D-7ECC-0342-FFFFE36798A5:::0B3CD1B6-E546-A26E-4792-136383F3520E:::32E00F67-6236-3B2C-7DB9-3993387B178C:::BRANCH MANAGER FK"/>
+   <object objectID="32E00F67-6236-3B2C-7DB9-3993387B178C" dmProperties="32E00F67-6236-3B2C-7DB9-3993387B178C:::oracle.dbtools.crest.model.design.logical.Entity:::DD0D4C7A-105D-7ECC-0342-FFFFE36798A5:::::::::BRANCH"/>
+   <object objectID="0B3CD1B6-E546-A26E-4792-136383F3520E" dmProperties="0B3CD1B6-E546-A26E-4792-136383F3520E:::oracle.dbtools.crest.model.design.logical.Entity:::DD0D4C7A-105D-7ECC-0342-FFFFE36798A5:::::::::MANAGER"/>
+   <object objectID="C:\Users\user\Desktop\Database\DataModels\Assignment1\monlib_logicalmodel\logical\relation\seg_0" dmProperties=""/>
+   <object objectID="C:\Users\user\Desktop\Database\DataModels\Assignment1\monlib_logicalmodel\logical\relation" dmProperties=""/>
+   <object objectID="C:\Users\user\Desktop\Database\DataModels\Assignment1\monlib_logicalmodel\logical\entity\seg_0" dmProperties=""/>
+   <object objectID="C:\Users\user\Desktop\Database\DataModels\Assignment1\monlib_logicalmodel\logical\entity" dmProperties=""/>
+</lastAddedObjects>

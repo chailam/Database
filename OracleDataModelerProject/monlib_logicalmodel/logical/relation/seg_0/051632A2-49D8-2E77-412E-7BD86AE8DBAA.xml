@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hasv6" directorySegmentName="seg_0" id="051632A2-49D8-2E77-412E-7BD86AE8DBAA">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:15:03 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<sourcePk>A5C56B51-C948-3A8C-DDE6-3FF36F4175F6</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>make</nameOnSource>
+<nameOnTarget>made by</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A102491F-4287-58C5-E970-CA7BF7DE80C4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>79B25570-8719-078C-9130-F793C5D5F859</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

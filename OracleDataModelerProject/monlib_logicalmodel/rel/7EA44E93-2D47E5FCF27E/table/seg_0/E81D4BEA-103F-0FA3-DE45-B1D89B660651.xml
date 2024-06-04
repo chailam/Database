@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E81D4BEA-103F-0FA3-DE45-B1D89B660651" name="BORRCLASSIFICATION">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>904C5DFB-07FB-BF20-D261-F6874B6C8AE1</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="borrClass" id="85630DF2-CF53-765A-834B-A1C7016834DF">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The classification of borrower(Junior, Adult, Organisation)</commentInRDBMS>
+<generatorID>ECAD9D61-EAA1-AF35-300C-BA58336FB181</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numberOfBooks" id="D45D6122-F6C9-4C8B-6FDB-E3CEA6EAA521">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The restriction on the number of books a borrower may have on loan at any one time.</commentInRDBMS>
+<generatorID>2FA60AC0-E2B6-A4A2-433D-C4A6C6F803E4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_numberOfBooks</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="numberOfBooks &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="loanPeriod" id="08DF2498-11A4-6221-81A3-FE6FA17B897E">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The loan period of the borrower classification</commentInRDBMS>
+<generatorID>08CF135A-F7E0-22DD-0918-3762003E18D0</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<constraintName>chk_loanPeriod</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="loanPeriod &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DA032B10-E3FB-6D17-4607-52A172151096" name="BORRCLASSIFICATION_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>85E14E17-D5B8-5C1B-EAAD-27A06DB786C4</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85630DF2-CF53-765A-834B-A1C7016834DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

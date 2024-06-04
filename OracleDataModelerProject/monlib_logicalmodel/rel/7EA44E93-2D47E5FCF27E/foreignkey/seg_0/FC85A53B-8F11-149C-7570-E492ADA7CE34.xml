@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FC85A53B-8F11-149C-7570-E492ADA7CE34" containerWithKeyObject="1026272D-AA5C-E941-9175-1463DB270F5D" localFKIndex="590DDF82-FE28-9DCE-4979-AD26DA3C0B04" name="FINE_LOAN_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>EEA4B88F-EAF5-02F0-9B54-4E467999A7BF</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>LOAN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D1D6DCA2-7BCF-6F7A-0C35-F4B298BE15EB</referredTableID>
+<keyObject>EC0B93D5-04E8-C325-0E95-B70C43FD68B3</keyObject>
+<referredKeyID>EC0B93D5-04E8-C325-0E95-B70C43FD68B3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>copyBarcodeNo,borrNo,loanReturnDate</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="monlib_logicalmodel" id="98C6814D-69B0-9120-AA8B-9DF09C0ED134" version="3.5">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 19:52:09 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>98C6814D-69B0-9120-AA8B-9DF09C0ED134</designId>
+</OSDM_Design>

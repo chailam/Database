@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B9C6AFB-7D5A-930A-B140-DE0E2276F508" name="LOAN">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:58:12 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="copyBarcodeNo" id="D08660B5-5002-5171-C2E4-2F9EAB010694">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:08:10 UTC</createdTime>
+<commentInRDBMS>The barcode number of the copies</commentInRDBMS>
+<generatorID>D076E72A-FC28-C1E4-E07B-755E449F634F</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>593406AE-0132-0639-0148-D5DDA038BD53</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loanReturnDate" id="97894990-3EE0-5604-BE58-FC385EB73FCF">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:08:44 UTC</createdTime>
+<commentInRDBMS>The return date of the loan</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="borrNo" id="5CD05F38-EB48-78BA-499D-C311E0E5A9A4">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:12:01 UTC</createdTime>
+<commentInRDBMS>The borrower identified number</commentInRDBMS>
+<generatorID>D47680DD-2AA3-8A05-D4B5-143AE9487A64</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>87F8E9DA-3FED-6131-6B25-12AD62921F74</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="loanActualReturnDate" id="7FF162C4-95D9-771E-8196-C2CDCC8BABA6">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:58:16 UTC</createdTime>
+<commentInRDBMS>The actual return date of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5259EFE2-6AD5-BAA2-15F4-2430525A5B57" name="LOAN PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:58:30 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D08660B5-5002-5171-C2E4-2F9EAB010694</attributeRef>
+<attributeRef>5CD05F38-EB48-78BA-499D-C311E0E5A9A4</attributeRef>
+<attributeRef>97894990-3EE0-5604-BE58-FC385EB73FCF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="31874788-FF98-4B35-7A8A-E0527FA9C890" containerWithKeyObject="7126B99B-B247-4C28-623D-9D4187270B5B" localFKIndex="1EA30EF7-37DF-7463-49A5-442076160BEA" name="ISBN_BOOK_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>35D3F904-C88B-E1FE-E217-E5D78802FCD7</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>BOOK</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>1EABEE4D-F561-E990-0681-623719922792</referredTableID>
+<keyObject>C981D6D1-6111-3366-1ABC-B6704001EE67</keyObject>
+<referredKeyID>C981D6D1-6111-3366-1ABC-B6704001EE67</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>bookCallNo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

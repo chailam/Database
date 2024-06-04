@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0B3CD1B6-E546-A26E-4792-136383F3520E" name="MANAGER">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:10:02 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="manNo" id="9496D4E1-9925-0DED-C5BC-265B59EFA7F5">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:11:37 UTC</createdTime>
+<commentInRDBMS>The id of manager.</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manName" id="AD16F477-3BE2-1FE9-83A8-5CA52640E8F9">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:16:36 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s name</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manPhone" id="79346ED1-A4BE-2A29-F145-B71183CDE249">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:19:38 UTC</createdTime>
+<commentInRDBMS>The manager&apos;s phone number</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="branCode" id="33FE3973-1C40-0273-7674-C65068B2FFB6">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:28:41 UTC</createdTime>
+<commentInRDBMS>The code of the branch</commentInRDBMS>
+<generatorID>3F31C901-EE4C-8E78-2F7B-4A2AEB888391</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referedAttribute>FDDB2F22-D8DA-4FB3-BD0C-20FF76CA80CF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="34402306-98DE-A135-385F-437D9EA042ED" name="MANAGER PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-13 20:14:29 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9496D4E1-9925-0DED-C5BC-265B59EFA7F5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

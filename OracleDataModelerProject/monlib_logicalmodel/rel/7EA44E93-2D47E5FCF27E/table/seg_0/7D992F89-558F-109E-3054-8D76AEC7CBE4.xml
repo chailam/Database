@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D992F89-558F-109E-3054-8D76AEC7CBE4" name="BOOKAUTHOR">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>E0610031-2FD5-EB13-5909-F714BA9AA08A</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bookCallNo" id="1642FACD-37FA-0EA8-82C0-D554FEE7B1CD">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The Dewey Decimal call no of a book</commentInRDBMS>
+<generatorID>60612B2B-BD28-9396-19A7-0F95C11309DE</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="647767DF-85AE-401F-C4EC-320658232511" referredColumn="910A9788-C540-F741-2B97-41790C8B63F4"/>
+</associations>
+</Column>
+<Column name="auCode" id="24E5864D-9D2E-AD7A-69DA-E825BA47D1D0">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<commentInRDBMS>The author&apos;s code</commentInRDBMS>
+<generatorID>2B621B80-ED82-1718-8108-19C702A4F532</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="074AE385-C96E-75DD-FCF9-53A8C17E5438" referredColumn="0DF98225-5BF1-04C9-3B77-E925D72E567F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26DFA7E8-6937-F6C2-E785-B50D90E601E4" name="BOOKAUTHOR_PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>C4A219C3-17A2-CF8A-0024-1E4CB27142BB</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1642FACD-37FA-0EA8-82C0-D554FEE7B1CD"/>
+<colUsage columnID="24E5864D-9D2E-AD7A-69DA-E825BA47D1D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8BD84FA2-39AA-DD2E-DB05-F13B04433ABF" name="BOOKAUTHOR_AUTHOR_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>C307CB5D-4C03-C8AB-3DCB-1637CC8543DA</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24E5864D-9D2E-AD7A-69DA-E825BA47D1D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B9A5D86-1E2F-7774-4643-77CD82AAB797" name="BOOKAUTHOR_BOOK_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>3ECD8235-2958-482D-10FE-64EFBEB97B5C</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1642FACD-37FA-0EA8-82C0-D554FEE7B1CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

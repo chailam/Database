@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D8B9D058-ACF4-CE53-A3B1-66B063E8C5E4" containerWithKeyObject="90270B1F-6E1D-42CA-BA87-12C0E28D803E" localFKIndex="42B17FBA-B2A5-820D-68E0-A03D32269F09" name="RESERVATION_COPIES_FK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 10:46:08 UTC</createdTime>
+<generatorID>AF381398-02AF-911A-96B6-7B54322F5D77</generatorID>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<referredTableLongName>COPIES</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>F83D16DD-7F50-FD71-F5D2-9A19643EE6B2</referredTableID>
+<keyObject>D95A22B6-F92F-2B9A-FD70-5BE7B553B47D</keyObject>
+<referredKeyID>D95A22B6-F92F-2B9A-FD70-5BE7B553B47D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>copyBarcodeNo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2A5D895A-8F76-2352-F9B1-2F1FF04ECC34" name="SUBJECT">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:49:53 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="subName" id="D8E13766-7402-F14B-BF02-860E214232CC">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:50:01 UTC</createdTime>
+<commentInRDBMS>The subject name of the book</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="49AA3B76-1BC3-66E2-41E3-3E6B4D398F5B" name="SUBJECT PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:50:07 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D8E13766-7402-F14B-BF02-860E214232CC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

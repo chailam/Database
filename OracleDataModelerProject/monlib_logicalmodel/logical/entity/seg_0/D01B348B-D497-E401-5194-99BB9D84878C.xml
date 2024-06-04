@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D01B348B-D497-E401-5194-99BB9D84878C" name="PUBLISHER">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:52:27 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pubCode" id="23B635C5-3342-330E-E4B0-608F2A479DEB">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:52:33 UTC</createdTime>
+<commentInRDBMS>The publisher&apos;s code</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pubName" id="9FCECE77-4435-C2CA-DF45-884220CC997B">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:53:11 UTC</createdTime>
+<commentInRDBMS>The publisher&apos;s name</commentInRDBMS>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9451244D-2E1B-0384-C548-8DE78601F890" name="PUBLISHER PK">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 08:52:39 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>23B635C5-3342-330E-E4B0-608F2A479DEB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

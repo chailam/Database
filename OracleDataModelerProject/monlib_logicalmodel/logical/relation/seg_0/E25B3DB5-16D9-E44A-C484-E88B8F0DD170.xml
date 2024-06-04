@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="contain" directorySegmentName="seg_0" id="E25B3DB5-16D9-E44A-C484-E88B8F0DD170">
+<createdBy>user</createdBy>
+<createdTime>2018-04-20 09:06:21 UTC</createdTime>
+<ownerDesignName>monlib_logicalmodel</ownerDesignName>
+<sourcePk>A5059BA9-BF4C-77A1-C957-EB1272650BDC</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>contains</nameOnSource>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8D6B0EBF-2154-5444-BE1A-60A64E83B98E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9A4C33D3-63E3-438B-23FA-1C5147BAB705</targetEntity>
+<transferable>true</transferable>
+</Relation>
