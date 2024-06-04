@@ -19,7 +19,7 @@ The Monash Library Services Database is being developed to streamline the operat
    to identify a particular title and for shelving books. A title may cover a number of different subjects, which the library wishes to record so that borrowers can use an online catalogue system to select books by subject as well as title and
    author's name.   
 
-   Detailed information about each book in the library will be recorded, including title, author(s), publisher, publication year, ISBN (a given title may have several ISBN's), purchase price, classification (reference or fiction), and number of pages. For fiction titles, reading levels will also be recorded  as an integer from 1 (Easy) to 30 (Very Difficult). A given title may be written by a number of different authors, however the library regards a title as only being published by a single publisher. 
+   - Detailed information about each book in the library will be recorded, including title, author(s), publisher, publication year, ISBN (a given title may have several ISBN's), purchase price, classification (reference or fiction), and number of pages. For fiction titles, reading levels will also be recorded  as an integer from 1 (Easy) to 30 (Very Difficult). A given title may be written by a number of different authors, however the library regards a title as only being published by a single publisher. 
 
 
 5. **Loan Management:** 
