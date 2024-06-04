@@ -1,11 +1,8 @@
-# Database
+# Database: MonLib Database Design & Implementation
 
 This repository contains the database structure design and implementation during my university studies. 
-It consists of two database structures:
-- Monash Library Services Database Design
-- B
 
-# Database A: MonLib Database Design
+## Overview: 
 
 The Monash Library Services Database is being developed to streamline the operations of the library system serving the residents of Monash Municipality. This database aims to efficiently manage various aspects of library operations, including branch management, borrower registration, book loans, reserves, fines, and more. 
 
